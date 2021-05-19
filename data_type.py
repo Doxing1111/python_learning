@@ -26,7 +26,10 @@ print(num5)
 num5 = str(num1) + num4 # 將整數轉型為字串進行相加 2055
 print(num5)
 
+score = 95
+print('喬得到的分數為: ' + str(score))
 
-
-
+a = b =c = 10
+d = a + b
+print(d)
 
