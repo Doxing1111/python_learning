@@ -40,7 +40,7 @@ print(list(list2)) # [-10, -8, -6]
 # for 迴圈
 list1 = ['Apple', 'Orange', 'Banana']
 for i in list1:
-    print(i, end= ', ') # Apple, Orange, Banana,
+    print(i, end=', ') # Apple, Orange, Banana,
 
 # ===========================================================================
 sum = 0
