@@ -95,3 +95,19 @@ Allen 的成績為: 85 分
 Joe 的成績為: 100 分
 Odin 的成績為: 60 分
 '''
+
+# get (鍵如果存在, 不論是否有設定預設值, 接傳回字典中對應的值
+dict1 = {'Apple':50, 'Banana':20, 'Orange':35}
+dict1.get('Apple') # 50
+dict1.get('Apple', 100) # 50
+dict1.get('Watermelon') # None
+dict1.get('Watermelon', 80) # 80
+print(dict1) # {'Apple': 50, 'Banana': 20, 'Orange': 35}
+
+# setdefault (若[鍵]不存在, 則會將[鍵-值]對加入字典作為元素
+dict1 = {'Apple':50, 'Banana':20, 'Orange':35}
+dict1.setdefault('Apple', 100) # 50
+dict1.setdefault('Watermelon') # None
+dict1.setdefault('Watermelon', 65)
+print(dict1) # {'Apple': 50, 'Banana': 20, 'Orange': 35, 'Watermelon': 65}
+
