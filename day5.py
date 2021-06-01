@@ -59,9 +59,39 @@ print(list1) # [2, False, 'Allen', 'Mark']
 dict1 = {'Apple':15, 'Banana':25, 'Orange':35}
 print(dict1['Apple']) # 15
 print(dict1['Orange']) # 35
-print(dict1)
+dict1['Banana'] = 40
+print(dict1['Banana']) # 40
+
+# del 刪除字典特定元素
+del dict1['Orange']
+print(dict1) # {'Apple':15, 'Banana':40}
+
+# 字典名稱.clear() 刪除字典所有元素
+dict1.clear()
+print(dict1) # {}
+
+# 以 keys 與 values 方法取得 [鍵] 與 [值] 的組合, 並轉換成串列
+dict1 = {'Mark':90, 'Jobs':40, 'Allen':85}
+dict1['Joe'] = 100
+dict1['Odin'] = 60
+listkey = list(dict1.keys()) # 以 [鍵] 為元素的組合
+listvalue = list(dict1.values()) # 以 [值] 為元素的組合
+for i in range(len(listkey)):
+    print('%s 的成績為: %d 分' % (listkey[i], listvalue[i]))
 
 
+# items() 方法可取得所有 [鍵-值]
+dict1 = {'Mark':90, 'Jobs':40, 'Allen':85}
+dict1['Joe'] = 100
+dict1['Odin'] = 60
+listitem = dict1.items()
+for name, score in listitem:
+    print(('%s 的成績為: %d 分' % (name, score)))
 
-
-
+'''
+Mark 的成績為: 90 分
+Jobs 的成績為: 40 分
+Allen 的成績為: 85 分
+Joe 的成績為: 100 分
+Odin 的成績為: 60 分
+'''
