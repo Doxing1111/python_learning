@@ -48,10 +48,10 @@ list1.append('Mark')
 print(list1) # [2, False, 'Allen', 'Mark']
 
 # 串列轉換元祖, 元祖不能增加元素
-# list2 = ['Apple', 'Banana', 'Orange']
-# tuple4 = tuple(list2)
-# tuple4.append(8) # AttributeError: 'tuple' object has no attribute 'append'
-# print(tuple4)
+list2 = ['Apple', 'Banana', 'Orange']
+tuple4 = tuple(list2)
+tuple4.append(8) # AttributeError: 'tuple' object has no attribute 'append'
+print(tuple4)
 
 # ==========================================================================
 # dict (字典) 取得元素值以鍵作為索引來取得值
@@ -110,4 +110,3 @@ dict1.setdefault('Apple', 100) # 50
 dict1.setdefault('Watermelon') # None
 dict1.setdefault('Watermelon', 65)
 print(dict1) # {'Apple': 50, 'Banana': 20, 'Orange': 35, 'Watermelon': 65}
-
