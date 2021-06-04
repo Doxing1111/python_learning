@@ -81,7 +81,7 @@ dict1['Joe'] = 100
 dict1['Odin'] = 60
 listkey = list(dict1.keys()) # 以 [鍵] 為元素的組合
 listvalue = list(dict1.values()) # 以 [值] 為元素的組合
-for i in range(len(listkey)):
+for i in range(len(listkey)): # 如無加上 len 會導致 TypeError: 'list' object cannot be interpreted as an integer
     print('%s 的成績為: %d 分' % (listkey[i], listvalue[i]))
 
 
