@@ -66,6 +66,11 @@ print(dict1['Banana']) # 40
 del dict1['Orange']
 print(dict1) # {'Apple':15, 'Banana':40}
 
+# del 字典名稱 (刪除字典)
+dict1 = {'Apple':15, 'Banana':25, 'Orange':35}
+del dict1
+print(dict1) # NameError: name 'dict1' is not defined
+
 # 字典名稱.clear() 刪除字典所有元素
 dict1.clear()
 print(dict1) # {}
