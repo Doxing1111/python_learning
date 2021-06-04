@@ -21,9 +21,12 @@ sayHello() # Hello World
 # 範例二
 def GetArea(length, width, height):
     area = length * width * height
+    print('area =', area) # area = 400
     return area
 
-GetArea(10, 20, 2) # 400
+GetArea(10, 20, 2) # area = 400
+x = GetArea(2, 2, 2) # area = 8
+print('x =', x) # x = 8
 
 
 # 範例三 (攝氏[Celsius]溫度轉華氏[Fahrenheit]溫度)
