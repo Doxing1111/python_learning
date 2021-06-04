@@ -128,3 +128,36 @@ if blood == None:
     print("沒有「" + name + "」血型！")
 else:
     print(name + "血型的個性 " + dict1[name])
+
+
+# in 功能
+dict1 = {'Apple':50, 'Banana':20, 'Orange':35}
+print('Apple' in dict1) # True
+print('Pear' in dict1) # False
+
+
+# 範例
+dict1 = {"林小明":85, "曾山水":93, "鄭美麗":67}
+name = input("輸入學生姓名：")
+if name in dict1:
+    print(name + "的成績為 " + str(dict1[name]))
+else:
+    score = input("輸入學生分數：")
+    dict1[name] = score
+    print("字典內容：" + str(dict1))
+
+
+# keys、values
+dict1 = {'Apple':50, 'Banana':20, 'Orange':35}
+list1 = dict1.keys()
+print(list1) # dict_keys(['Apple', 'Banana', 'Orange'])
+
+list2 = dict1.values()
+print(list2) # dict_values([50, 20, 35])
+
+list3 = list(dict1.keys()) # 轉換成串列
+print(list3[1]) # Banana
+
+list4 = list(dict1.values())
+print(list4[2]) # 35
+
