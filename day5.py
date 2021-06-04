@@ -110,3 +110,16 @@ dict1.setdefault('Apple', 100) # 50
 dict1.setdefault('Watermelon') # None
 dict1.setdefault('Watermelon', 65)
 print(dict1) # {'Apple': 50, 'Banana': 20, 'Orange': 35, 'Watermelon': 65}
+
+
+# dictget.py
+dict1 = {'A':'內向', 'B':'外向', 'O':'堅強', 'AB':'聰明'}
+name = str.upper(input("請輸入查詢的血型: "))  # upper 將小寫字母轉換為大寫字母
+blood = dict1.get(name)
+
+print(blood)
+
+if blood == None:
+    print("沒有「" + name + "」血型！")
+else:
+    print(name + "血型的個性 " + dict1[name])
