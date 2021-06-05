@@ -36,3 +36,16 @@ def ctof(c):
 
 inputc = float(input('請輸入攝氏溫度: '))
 print('華氏溫度為: %4.1f 度' % ctof(inputc))
+
+
+# 不訂數目參數函式
+def calsum(*params):
+    total = 0
+    for param in params:
+        total += param
+    return total
+
+print('1 個參數: calsum(2) = %d' % calsum(2)) # 1 個參數: calsum(2) = 2
+print('2 個參數: calsum(2,5) = %d' % calsum(2,5)) # 2 個參數: calsum(2,5) = 7
+print('3 個參數: calsum(2,5,7) = %d' % calsum(2,5,7)) # 3 個參數: calsum(2,5,7) = 14
+
