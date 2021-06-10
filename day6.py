@@ -63,6 +63,7 @@ var2 = 20
 scope()
 print(var1, var2) # 10, 20
 
+
 # 在函式內使用全域變數, 需在函式中以 global 宣告
 def scope():
     global var1
@@ -75,3 +76,22 @@ var2 = 20
 
 scope()
 print(var1, var2) # 1, 20
+
+
+# import 模組
+# 1. import random
+import random  # 匯入random模組
+random.seed()  # 使用模組裡的函式
+
+# 2. from 模組名稱 import *
+from random import * # 使用模組函式不必在輸入模組名稱
+seed()
+
+# 3. from 模組名稱 import 函式1, 函式2, ....
+from random import seed, random
+seed()
+random()
+
+# 4. import 模組名稱 as 別名
+import random as r
+r.seed()
