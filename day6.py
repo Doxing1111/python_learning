@@ -55,10 +55,23 @@ print('3 個參數: calsum(2,5,7) = %d' % calsum(2,5,7)) # 3 個參數: calsum(2
 # 在函式內, 會使用區域變數; 函式外, 因區域變數不存在, 故使用全域變數
 def scope():
     var1 = 1
-    print(var1, var2) # 1, 20
+    print(var1, var2) # 1, 20 (函式中沒有 var2 變數, 故使用全域變數 var = 20
 
 var1 = 10
 var2 = 20
 
 scope()
 print(var1, var2) # 10, 20
+
+# 在函式內使用全域變數, 需在函式中以 global 宣告
+def scope():
+    global var1
+    var1 = 1
+    var2 = 2
+    print(var1, var2) # 1, 2
+
+var1 = 10
+var2 = 20
+
+scope()
+print(var1, var2) # 1, 20
