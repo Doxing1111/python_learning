@@ -49,3 +49,16 @@ print('1 個參數: calsum(2) = %d' % calsum(2)) # 1 個參數: calsum(2) = 2
 print('2 個參數: calsum(2,5) = %d' % calsum(2,5)) # 2 個參數: calsum(2,5) = 7
 print('3 個參數: calsum(2,5,7) = %d' % calsum(2,5,7)) # 3 個參數: calsum(2,5,7) = 14
 
+
+# 全域變數、區域變數
+# 有相同名稱的全域變數與區域變數, 以區域變數為先
+# 在函式內, 會使用區域變數; 函式外, 因區域變數不存在, 故使用全域變數
+def scope():
+    var1 = 1
+    print(var1, var2) # 1, 20
+
+var1 = 10
+var2 = 20
+
+scope()
+print(var1, var2) # 10, 20
