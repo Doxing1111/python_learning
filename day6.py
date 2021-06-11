@@ -93,5 +93,6 @@ seed()
 random()
 
 # 4. import 模組名稱 as 別名
-import random as r
-r.seed()
+import time as t
+x = t.localtime()
+print(x[0]) # 2021
