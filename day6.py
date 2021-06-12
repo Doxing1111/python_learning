@@ -96,3 +96,30 @@ random()
 import time as t
 x = t.localtime()
 print(x[0]) # 2021
+
+
+# import time
+import time as t
+x = t.localtime()
+print(x[0]) # 2021
+
+
+# 猜數字遊戲
+import random as r
+
+p = r.randint(1, 100)
+low = 0
+up = 100
+n = 0
+
+while n != p:
+    print('終極密碼 %d ~ %d:' % (low, up), end=" ")
+    n = int(input('請您輸入一組號碼: '))
+    if n <= low or n >= up:
+        print('輸入範圍有誤, 請重新輸入！')
+    elif n > p:
+        up = n
+    elif n < p:
+        low = n
+    else:
+        print('恭喜您! 猜中了！')
