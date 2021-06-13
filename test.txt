@@ -1,0 +1,4 @@
+Hello Python!
+Learning Python!
+附加測試~
+TEST
