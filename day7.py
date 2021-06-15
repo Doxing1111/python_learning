@@ -110,5 +110,16 @@ with open('test.txt', 'r', encoding='utf-8') as f:
     print(str1)
 
 
+# readlines() 讀取全部文件內容, 以串列方式傳回
+with open('test.txt', 'r', encoding='utf-8') as f:
+    content = f.readlines()
+    print(type(content)) # <class 'list'>
+    print(content) # ['Hello Python!\n', 'Learning Python!\n', '附加測試~\n', 'TEST']
 
 
+# readline([size])
+with open('test.txt', 'r', encoding='utf-8') as f:
+    content = f.readline() # 讀取第一列, 因包含\n跳列字元, print()顯示中間會多一列空白列
+    print(content) # Hello Python!
+    content = f.readline(8) # 讀取後指標移到下一列, 即第二列, 讀取第二列前面8個字元
+    print(content) # Learning
