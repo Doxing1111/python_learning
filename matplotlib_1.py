@@ -24,7 +24,7 @@ plt.show()
 
 # 文件命名不要是 matplotlib.py, 會導致無法導入 matplotlib 庫
 
-
+# ===================================================================================
 
 # 範例二
 import matplotlib.pyplot as plt
@@ -49,6 +49,34 @@ plt.rcParams["font.sans-serif"] = "Microsoft JhengHei" # 也可設mingliu或DFKa
 plt.rcParams["axes.unicode_minus"] = False
 plt.show()
 
+# ==================================================================================
 
+範例三
+import matplotlib.pyplot as plt
+
+listx = ['c', 'c++', 'c#', 'java', 'python']
+listy = [45, 28, 38, 32, 50]
+plt.bar(listx, listy, width=0.5, color='rgb')
+plt.title("資訊程式課程選修人數")
+plt.xlabel("程式課程")
+plt.ylabel("選修人數")
+
+# 設定中文字型
+plt.rcParams["font.sans-serif"] = "Microsoft JhengHei"
+plt.show()
+# ================================================================================
+
+# 範例四
+price = [30, 40, 50, 80, 100]
+tprice = []
+for item in price:
+    tprice.append(item * 1.05)
+print(tprice)
+
+
+# 範例四 (串列生成式)
+price = [30, 40, 50, 80, 100]
+price_list = [item * 1.05 for item in price]
+print(price_list)
 
 
