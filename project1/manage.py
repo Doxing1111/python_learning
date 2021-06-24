@@ -16,10 +16,10 @@ def ReadData():
     with open('password.txt', 'r', encoding='UTF-8-sig') as f:  # windows對於utf-8格式的檔案儲存預設是帶有BOM的格式
         filedata = f.read()
         if filedata != "":
-            data = ast.literal_eval(filedata)
+            data = ast.literal_eval(filedata)  # 將資料轉成字典
             return data
         else:
-            return dict()
+            return dict()  # 回傳空的字典
 
 
 def disp_data():
