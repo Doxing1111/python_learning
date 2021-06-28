@@ -45,5 +45,62 @@ p1 = Person('Ken')
 p1.greet() # Hi, my name is Ken
 
 # ======================================================
+# 繼承和多態
+class Animal():
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        print('Hello, I am an %s.' % self.name)
 
+# class Dog():
+#     def __init__(self, name):
+#         self.name = name
+#     def greet(self):
+#         print('WangWang.., I am %s.' % self.name)
 
+# 繼承
+class Dog(Animal):
+    def greet(self):
+        print('WangWang.., I am %s.' % self.name)
+
+animal = Animal('Cat')
+animal.greet() # Hello, I am an Cat.
+
+dog = Dog('Dog')
+dog.greet()  # WangWang.., I am Dog.
+
+class Dog(Animal):
+    def greet(self):
+        print('WangWang.., I am %s.' % self.name)
+    def run(self):
+        print('I am running!')
+
+dog = Dog('Dog')
+dog.greet()  # WangWang.., I am Dog.
+dog.run()  # I am running!
+
+# =======================================================
+# 多態 (Polymorphism)
+class Animal():
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        print(f'Hello, I am {self.name}.')
+
+class Dog(Animal):
+    def greet(self):
+        print(f'WangWang.., I am {self.name}.')
+
+class Cat(Animal):
+    def greet(self):
+        print(f'MiaoMiao.., I am {self.name}.')
+
+def hello(animal):
+    animal.greet()
+
+dog = Dog('dog')
+hello(dog) # WangWang.., I am dog.
+cat = Cat('cat')
+hello(cat) # MiaoMiao.., I am cat.
+
+# ======================================================
