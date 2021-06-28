@@ -104,3 +104,29 @@ cat = Cat('cat')
 hello(cat) # MiaoMiao.., I am cat.
 
 # ======================================================
+# Iterators
+class Fib():
+    def __init__(self):
+        self.a, self.b = 0, 1
+    def __iter__(self):
+        return self
+    def __next__(self):
+        self.a, self.b = self.b, self.a + self.b
+        return self.a
+
+fib = Fib()
+for i in fib:
+    if i > 10:
+        break
+    print(i)  # 1, 1, 2, 3, 5, 8
+
+# ======================================================
+# 訪問限制 (屬性前面加上兩個__表示)
+class Animal():
+    def __init__(self, name):
+        self.__name = name
+    def greet(self):
+        print(f'Hello, I am self.__name.')
+
+animal = Animal('Cow')
+animal.__name # error (AttributeError: 'Animal' object has no attribute '__name')
