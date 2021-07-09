@@ -20,7 +20,7 @@ def fnOk():
 win = tk.Tk()
 win.title('核取按鈕範例')
 win.geometry('500x150')
-name=tk.StringVar()
+name = tk.StringVar()
 lblName = tk.Label(win, text='姓名', padx=10, pady=8)
 lblName.grid(row=0, column=0)
 txtName = tk.Entry(win, width=10, textvariable=name)
