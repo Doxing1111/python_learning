@@ -8,7 +8,7 @@ author: Joe
 此測試案例無導入 unittest 單元測試架構來執行, 有幾個缺點:
 1.需自行定義斷言失敗後的提示
 2.當一個測試函數執行失敗後, 後面的測試函數將不在執行
-2.執行結果無法統計   
+3.執行結果無法統計   
 '''
 
 from calculator import Calculator
