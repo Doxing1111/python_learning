@@ -1,5 +1,5 @@
 '''
-date: 2021/07/12
+date: 2021/07/13
 author: Joe
 '''
 
@@ -10,30 +10,34 @@ from calculator import Calculator
 class TestCalculator(unittest.TestCase):
 
     # 測試使用案例前置動作
-    def setUp(self):
-        print('Start Test')
+    @classmethod
+    def setUpClass(cls):
+        print('Test Start =======>')
 
     # 測試使用案例後置動作
-    def tearDown(self):
-        print('Test End')
+    @classmethod
+    def tearDownClass(cls):
+        print('Test End =======>')
 
     # 測試案例
-    def test_add(self):
+    def test_add_01(self):
         c = Calculator(5, 5)
         result = c.add()
         self.assertEqual(result, 10)
 
-    def test_sub(self):
+    def test_sub_02(self):
         c = Calculator(6, 1)
         result = c.sub()
         self.assertEqual(result, 5)
 
-    def test_mul(self):
+    # 當條件為真時, 執行裝飾的測試
+    @unittest.expectedFailure # 預期失敗
+    def test_mul_03(self):
         c = Calculator(2, 2)
         result = c.mul()
         self.assertEqual(result, 5)
 
-    def test_div(self):
+    def test_div_04(self):
         c = Calculator(6, 3)
         result = c.div()
         self.assertEqual(result, 2)
