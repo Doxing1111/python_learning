@@ -3,7 +3,9 @@ date: 2021/07/13
 author: Joe
 '''
 
+
 import unittest
+from TestRunner import HTMLTestRunner
 from time import sleep
 from selenium import webdriver
 
@@ -40,5 +42,18 @@ class TestGoogle(unittest.TestCase):
         cls.driver.quit()
 
 
-if __name__ == 'main':
-    unittest.main()
+if __name__ == '__main__':
+    suite = unittest.TestSuite()
+    suite.addTest(TestGoogle('test_search_key_unittest'))
+    suite.addTest(TestGoogle('test_search_key_selenium'))
+
+
+    html_report = 'C:\\Users\\Li\\PycharmProjects\\python_learning\\m_unittest\\test_report\\test_report.html'
+    fp = open(html_report, 'wb')
+    runner = HTMLTestRunner(
+        stream=fp,
+        title='Test_Google by Selenium Test',
+        description='For Joe Practice'
+    )
+
+    runner.run(suite)
