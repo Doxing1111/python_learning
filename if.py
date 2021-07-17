@@ -48,3 +48,20 @@ if money >= 10000:
         print(money * 0.95, end=' 元')
 else:
     print('您的購物總金額未達打折條件')
+
+# ===============================================
+country = input('請問您來至美國或台灣: ')
+age = input('請輸入年齡: ')
+age = int(age)
+if country == '台灣':
+    if age >= 18:
+        print('你可以考取駕照')
+    else:
+        print('你還不能考取駕照')
+elif country == '美國':
+    if age >= 16:
+        print('你可以考取駕照')
+    else:
+        print('你還不能考取駕照')
+else:
+    print('請輸入美國或台灣')
